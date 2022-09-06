@@ -16,6 +16,9 @@
         <input id="num2" type="number" />
         <button onclick="somar()">Somar</button>
         <input id="soma" type="number" readonly />
+        <div id="history">
+         
+        </div>
     </div>
     <script>
         function somar() {
@@ -26,6 +29,8 @@
             var soma = num1 + num2;
             document.getElementById("soma").value = soma;
             console.log(soma);
+
+            document.getElementById("history").innerHTML += "<h1>" +soma +"</h1>";
         }
 
         function somar2() {
