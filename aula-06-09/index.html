@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 03 - Calculadora JavaScript</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Calculadora Básica</h1>
+        <input id="num1" type="number" />
+        <input id="num2" type="number" />
+        <button onclick="somar()">Somar</button>
+        <input id="soma" type="number" readonly />
+    </div>
+    <script>
+        function somar() {
+            //alert("Click no botão");
+            console.log("Mensagem click no botao");
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var soma = num1 + num2;
+            document.getElementById("soma").value = soma;
+            console.log(soma);
+        }
+
+        function somar2() {
+            document.getElementById("soma").value = 
+             parseFloat(document.getElementById("num1").value) +
+             parseFloat(document.getElementById("num2").value);
+        }
+
+    </script>
+
+
+</body>
+
+</html>
